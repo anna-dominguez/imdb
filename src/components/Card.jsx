@@ -5,10 +5,10 @@ import { FiThumbsUp } from 'react-icons/fi'
 export default function Card({ result }) {
   return (
     <div
-      className="cursor-pointer sm:p-3 sm:hover:shadow-slate-400 sm:shadow-md rounded-lg
+      className="cursor-pointer flex sm:p-3 sm:hover:shadow-slate-400 sm:shadow-md rounded-lg
      sm:border sm:border-slate-400 sm:m-2 transition-shadow duration-200 group"
     >
-      <Link href={`/movie/${result.id}`}>
+      <Link className="w-full" href={`/movie/${result.id}`}>
         <Image
           width={500}
           height={300}
@@ -23,7 +23,7 @@ export default function Card({ result }) {
             height: 'auto',
           }}
           blurDataURL="spinner.svg"
-        ></Image>
+        />
         <div className="p-2">
           <p className="line-clamp-2 text-md">{result.overview}</p>
           <h2 className="truncate text-lg font-bold">
